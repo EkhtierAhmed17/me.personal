@@ -20,7 +20,7 @@
                 <li><a href="#Services-left">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
-                     <a href="">My Work</a>
+                    <a href="">My Work</a>
                     <div class="dropdown-menu">
                         <a href="project1.html">Calculator</a>
                         <a href="">Digital Watch</a>
@@ -145,6 +145,22 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+  <script>
+  // JavaScript to toggle dropdown visibility
+    const myWorkButton = document.getElementById('myWorkButton');
+    const workDropdown = document.getElementById('workDropdown');
+
+    myWorkButton.addEventListener('click', function () {
+        workDropdown.classList.toggle('show'); // Toggle the "show" class to display or hide the dropdown
+    });
+
+    // Close the dropdown if the user clicks outside
+    window.addEventListener('click', function (event) {
+        if (!myWorkButton.contains(event.target) && !workDropdown.contains(event.target)) {
+            workDropdown.classList.remove('show');
+        }
+    });
+</script>
   
 </body>
 </html>
